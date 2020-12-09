@@ -1,0 +1,86 @@
+@import url(../css/font.css);
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--Open);
+}
+
+:root{
+    /*  Theme colors */
+    --text-gray: #3f4954;
+    --text-light: #686666da;
+    --text-black: #0f0f0f;
+    --white: #ffff;
+    --midnight: #510AED;
+
+    /* Gradient Color */
+    --sky: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+
+    /* theme font-family */
+    --Open:'Open sans',sans-serif;
+}
+
+/* -------- Global Classes -------- */
+
+a{
+    text-decoration: none;
+    color: var(--text-black);
+}
+
+.flex-row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+img{
+    width: 100%;
+}
+
+/* ----x---- Global Classes ----x---- */
+
+/* ---------------NAVBAR--------------------- */
+.head {
+    background: var(--sky);
+    height: 0rem;
+    min-height: 7vh;
+    width: 100%;
+}
+.nav-brand{
+    padding: 1.2rem 2rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+.fas{
+    color: var(--text-black);
+}
+
+/* ------x---------NAVBAR--------x------------ */
+
+/* ---------------MAIN-------------------- */
+
+.img-cover .content{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.CovertBx{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 10%;
+    margin: 3rem 2rem;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.4);
+}
+
+
+/* ---------------MAIN-------------------- */
