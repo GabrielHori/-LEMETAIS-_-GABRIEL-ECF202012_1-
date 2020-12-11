@@ -9,25 +9,38 @@
 body{
     background-color: #151320;
     height: 100vh;
+    display: grid;
 }
 
 :root{
     /*  Theme colors */
+    --base: #0f1923;
     --text-gray: #3f4954;
     --text-light: #686666da;
     --text-black: #0f0f0f;
     --white: #ffff;
     --midnight: #510AED;
+    --pink: #ff4655;
+    --blackblue:#151320;
 
     /* Gradient Color */
     --sky: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
 
     /* theme font-family */
     --Open:'Open sans',sans-serif;
+
+    /* Transition */
+
+    --transition: 0.3s ease-out all;
 }
 
-/* -------- Global Classes -------- */
 
+/* -------- Global Classes -------- */
+li{
+    color: var(--text-black);
+    text-decoration: none;
+    list-style-type: none;
+}
 a{
     text-decoration: none;
 }
@@ -55,7 +68,7 @@ h1{
 
 /* ---------------NAVBAR--------------------- */
 .nav{
-    background: #fff;
+    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
     padding: 0 2rem;
     height: 0rem;
     width: auto;
@@ -99,10 +112,9 @@ h1{
 
 .img-cover .cards{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(6, 1fr);
     padding: 20px;
-    grid-gap: 40px;
-    
+    grid-gap: 40px;   
 }
 .heading{
     display: flex;
@@ -110,7 +122,7 @@ h1{
     flex-direction: column;
     align-items: center;
     font-size: 25px;
-    margin: 4rem 20rem;
+    margin: 1rem 1rem;
 }
 
 .CovertBx{
@@ -166,17 +178,109 @@ h1{
 .card7>.container:after{
     background-image: linear-gradient(to top, #dbdcd7 0%, #dddcd7 24%, #e2c9cc 30%, #e7627d 46%, #b8235a 59%, #801357 71%, #3d1635 84%, #1c1a27 100%);
 }
+
+.details{
+    padding: 20px 10px;
+}
+
+.details>h3{
+    color: var(--white);
+    font-weight: 600;
+    font-size: 10px 0 15px 0;
+}
+
+.details>p{
+    color: #a0a0a0;
+    font-weight: 15px;
+    line-height: 30px;
+    font-weight: 400;
+}
+
+
 /* -------x--------MAIN------------x-------- */
 
+/* ---------------BOUTON-------------------- */
+.btn-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn {
+    display: inline-block;
+    background-color: var(--blackblue);
+    color: white;
+    padding: 0px;
+    border-radius: 16px;
+    border: 1px solid var(--white);
+    width: 11rem;
+    height: 2rem;
+    line-height: 33px;
+    text-align: center;
+    align-items: center;
+}
+
+.btn:hover {
+    background-color: white;
+    color:var(--text-gray);
+    transition: 0.4s;
+}
 
 
+/* -------x--------BOUTON-------------x------- */
+
+/* -------------------- CONTENT MUSIC -------------------------*/
+  
 
 
+/* --------------- FOOTER -------------------- */
+
+/* -------x-------- FOOTER -----------x--------- */
 
 /* ---------------MEDIA QUERIES-------------------- */
 
+@media only screen and (max-width: 1030px) {
+    .nav{
 
+        padding: 0 1rem;
+        height: 4rem;
+        width: auto;
+        min-height: 7vh; 
+    }
+    .nav .social{
+        color: #0f0f0f;
+        padding: 1.4rem 0;
+    }
+    
 
+    .img-cover .cards{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding: 20px;
+        grid-gap: 40px;   
+    }
+}
+
+@media only screen and (max-width: 325px) {
+
+    .img-cover .cards{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        padding: 20px;
+        grid-gap: 40px;   
+    }
+    .nav{
+        padding: 0rem 0rem 1rem 1rem;
+        height: 4rem;
+        width: auto;
+        min-height: 7vh; 
+    }
+    .nav .social{
+        color: #0f0f0f;
+        padding: 1.4rem 0;
+    }
+    
+
+}
 
 
 
