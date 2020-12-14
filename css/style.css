@@ -73,6 +73,8 @@ h1{
     height: 0rem;
     width: auto;
     min-height: 7vh;
+    position: relative;
+    
 }
 .nav .nav-menu{
     display: flex;

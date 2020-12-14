@@ -36,21 +36,18 @@ const displayAlbums = function (data) {
     for (const item of albums) {
         // on crée une card bootstrap en lui injectant les données du fetch
         const html = `
-        <div class="card">
-                <img src="${item.album.cover_big}" class="card-img-top" alt="${
-            item.title
-        }" />
-                <div class="card-body">
-                    <h5 class="card-title">${item.title}</h5>
-                    <p class="card-text"></p>
-                    <button data-tracklist="${item.album.tracklist}"
-                     class="btn btn-primary">Tracklist${
-                         item.explicit_lyrics ? ` (Explicit Content)` : ''
-                     }</button>
-                    <audio controls src="${item.preview}"></audio>
-                </div>
-            </div>`;
-
+        <div class="CovertBx card1">
+        <div class="container">
+            <img src="${item.album.cover_big}" alt="${
+                item.title
+                }">
+        </div>
+        <div class="details">
+            <h3 class="card-title">${item.title}</h3>
+            <p class="card-text">Ecoute moi</p>
+    <audio controls src="${item.preview}"></audio>
+        </div>`;
+                     
         // puis on l'insère dans le HTML
         albumsDiv.insertAdjacentHTML('beforeend', html);
         // on lui ajoute un écouteur sur la tracklist
