@@ -1,0 +1,211 @@
+@import url(../css/font.css);
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--Open);
+}
+
+body{
+    height: 100vh;
+    display: grid;
+    background-color: #151320;
+}
+
+:root{
+    /*  Theme colors */
+    --base: #0f1923;
+    --text-gray: #3f4954;
+    --text-light: #686666da;
+    --text-black: #0f0f0f;
+    --white: #ffff;
+    --midnight: #510AED;
+    --pink: #ff4655;
+    --blackblue:#151320;
+
+    /* Gradient Color */
+    --sky: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+
+    /* theme font-family */
+    --Open:'Open sans',sans-serif;
+
+    /* Transition */
+
+    --transition: 0.3s ease-out all;
+}
+
+
+/* -------- Global Classes -------- */
+li{
+    color: var(--text-black);
+    text-decoration: none;
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+
+.flex-row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+img{
+    width: 100%;
+    display: block;
+    border-radius: 20px 20px 0 0;
+    -webkit-border-radius: 20px 20px 0 0;
+    -moz-border-radius: 20px 20px 0 0;
+    -ms-border-radius: 20px 20px 0 0;
+    -o-border-radius: 20px 20px 0 0;
+}
+
+h1{
+    color: var(--white);
+}
+/* ----x---- Global Classes ----x---- */
+/* ---------------NAVBAR--------------------- */
+.nav{
+    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+    padding: 0 2rem;
+    height: 0rem;
+    width: auto;
+    min-height: 7vh;
+    position: relative;
+    
+}
+.nav .nav-menu{
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav .nav-items{
+    display: flex;
+    margin: 0;
+}
+
+.nav .nav-brand a{
+    font-size: 1.6rem;
+    padding: 1rem 0;
+    display: block;
+    font-family: var(--Open);
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #0f0f0f;
+}
+
+.nav .social{
+    color: #0f0f0f;
+    padding: 1.4rem 0;
+}
+
+.nav .social i{
+    padding: 0 .2rem;
+    color: #0f0f0f;
+}
+
+.social i:hover{
+    color:#7873b8;
+}
+/* ------x---------NAVBAR--------x------------ */
+
+/* ---------------MAIN-------------------- */
+.img-cover{
+    background-color: #151320;
+}
+.img-cover .cards{
+    display: grid;
+    grid-template-columns: repeat(1, 2fr);
+    padding: 20px;
+    grid-gap: 40px;   
+    width: 19rem;
+    height: 50rem
+}
+.heading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 25px;
+    margin: 1rem 1rem;
+    color: var(--white);
+}
+.title-head{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 5px;
+    grid-gap: 19rem;
+}
+.CovertBx{
+   background-color: #1c1b29;
+   border-radius: 20px;
+   -webkit-border-radius: 20px;
+   -moz-border-radius: 20px;
+   -ms-border-radius: 20px;
+   -o-border-radius: 20px;
+   box-shadow: 0 0 30px rgba(0, 0, 0, 0.18);
+}
+
+.container{
+    position: relative;
+    clip-path: polygon(0 0,100% 0, 100% 85%, 0 100%);
+}
+
+.container:after{
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 20px 20px 0 0;
+    -webkit-border-radius: 20px 20px 0 0;
+    -moz-border-radius: 20px 20px 0 0;
+    -ms-border-radius: 20px 20px 0 0;
+    -o-border-radius: 20px 20px 0 0;
+    opacity: 0.7;
+}
+
+.card1>.container:after{
+    background-image: linear-gradient(135deg, #0100ec,#fb36f4);
+}
+
+.card2>.container:after{
+    background-image: linear-gradient(45deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%);
+}
+
+.card3>.container:after{
+    background-image: linear-gradient(90deg, #FF9A8B 0%, #FF6A88 55%, #FF99AC 100%);
+}
+.card4>.container:after{
+    background-image: linear-gradient( 135.9deg,  rgba(109,25,252,1) 16.4%, rgba(125,31,165,1) 56.1% );
+}
+.card5>.container:after{
+    background-image: radial-gradient( circle 349px at 7.4% 22.1%,  rgba(226,5,5,1) 0%, rgba(133,2,229,1) 100.7% );
+}
+.card6>.container:after{
+    background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+}
+.card7>.container:after{
+    background-image: linear-gradient(to top, #dbdcd7 0%, #dddcd7 24%, #e2c9cc 30%, #e7627d 46%, #b8235a 59%, #801357 71%, #3d1635 84%, #1c1a27 100%);
+}
+
+.details{
+    padding: 20px 10px;
+}
+
+.details>h3{
+    color: var(--white);
+    font-weight: 600;
+    font-size: 10px 0 15px 0;
+}
+
+.details>p{
+    color: #a0a0a0;
+    font-weight: 15px;
+    line-height: 30px;
+    font-weight: 400;
+}
+
+
+/* -------x--------MAIN------------x-------- */
