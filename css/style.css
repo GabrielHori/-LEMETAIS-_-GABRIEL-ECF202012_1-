@@ -7,9 +7,9 @@
 }
 
 body{
-    background-color: #151320;
     height: 100vh;
     display: grid;
+    background-color: #151320;
 }
 
 :root{
@@ -75,6 +75,7 @@ h1{
     min-height: 7vh;
 }
 .nav .nav-menu{
+    display: flex;
     justify-content: space-between;
 }
 
@@ -109,7 +110,9 @@ h1{
 /* ------x---------NAVBAR--------x------------ */
 
 /* ---------------MAIN-------------------- */
-
+.img-cover{
+    background-color: #151320;
+}
 .img-cover .cards{
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -229,15 +232,109 @@ h1{
 /* -------x--------BOUTON-------------x------- */
 
 /* -------------------- CONTENT MUSIC -------------------------*/
-  
+.container-music{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #151320;
+}
+.chooseArtist {
+    background-color: #151320;
+    
+}
 
+.showAlbums {
+    display: inline-block;
+    background-color: var(--blackblue);
+    color: white;
+    padding: 0px;
+    border-radius: 16px;
+    border: 1px solid var(--white);
+    width: 15rem;
+    height: 3rem;
+    line-height: 33px;
+    text-align: center;
+    align-items: center;
+}
 
+#showOtherArtist {
+    color: var(--white);
+}
+.card-body{
+    align-items: center;
+    text-align: center;
+}
+
+.album-list {
+    background-color: #151320;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    padding: 20px;
+    grid-gap: 40px;  
+}
+.card button {
+    display: inline-block;
+    background-color: var(--blackblue);
+    color: white;
+    padding: 0px;
+    border-radius: 16px;
+    border: 1px solid var(--white);
+    width: 11rem;
+    height: 2rem;
+    line-height: 33px;
+    text-align: center;
+    align-items: center;
+}
+
+audio{
+    width: 14rem;
+}
+/* --------x------------ CONTENT MUSIC --------------x-----------*/
 /* --------------- FOOTER -------------------- */
+footer {
+    background-color: #151320;
+    width: 100%;
+    padding: 112px;
+    color: #fff;
+}
+.list1 {
+    height: 150px;
+    width: 300px;
+    line-height: 50px;
+}
 
+.boutton2{
+    display: inline-block;
+    background-color: var(--blackblue);
+    color: white;
+    padding: 0px;
+    border-radius: 16px;
+    border: 1px solid var(--white);
+    width: 11rem;
+    height: 2rem;
+    line-height: 33px;
+    text-align: center;
+    align-items: center;
+}
 /* -------x-------- FOOTER -----------x--------- */
 
 /* ---------------MEDIA QUERIES-------------------- */
-
+@media only screen and (max-width: 1800px) {
+    .album-list{
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        padding: 20px;
+        grid-gap: 40px;   
+    }
+}
+@media only screen and (max-width: 1400px) {
+    .album-list{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        padding: 20px;
+        grid-gap: 40px;   
+    }
+}
 @media only screen and (max-width: 1030px) {
     .nav{
 
@@ -258,6 +355,21 @@ h1{
         padding: 20px;
         grid-gap: 40px;   
     }
+    .album-list{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding: 20px;
+        grid-gap: 40px;   
+    }
+}
+@media only screen and (max-width: 690px) {
+    .album-list{
+        display: grid;
+        grid-template-columns: repeat(1, 2fr);
+        padding: 20px;
+        grid-gap: 40px;   
+    }
+
 }
 
 @media only screen and (max-width: 325px) {
